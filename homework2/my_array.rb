@@ -6,21 +6,15 @@ class MyArray
   end
 
   def each(&block)
-    i=0
-    n=@a.length
-    while(i<n)
-      block.call(@a[i])
-      i = i+1
+    for e in @a
+      block.call(e)
     end
   end
 
   def map
-    i=0
-    n=@a.length
     result = []
-    while(i<n)
-      result[i] = yield(@a[i])
-      i = i+1
+    for e in @a
+      result.push yield(e)
     end
     MyArray.new(result)
   end
