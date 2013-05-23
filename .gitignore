@@ -16,5 +16,5 @@ tmp
 .yardoc
 _yardoc
 doc/
-koans/.idea
-koans/.pathprogress
+.idea
+.path_progress
